@@ -10,7 +10,7 @@ jobs:
     with: 
       path: ~/.m2/repository
       key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
-      java-version: "$java-version"
+      java-version: "$JAVA_VERSION"
       #cmd: mvn -f pom.xml clean package
       #upload-path: ./poorna.zip
     secrets:

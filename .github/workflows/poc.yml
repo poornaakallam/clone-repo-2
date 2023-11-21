@@ -1,0 +1,22 @@
+---
+name: push
+on: 
+  push: 
+    branches:
+        - '*'
+jobs:
+  build:
+    uses: poornaakallam/workflows/.github/workflows/poc.yml@main
+    with: 
+      path: ~/.m2/repository
+      key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
+      java-version: ${{ env.JAVA_VERSION }}
+      #cmd: mvn -f pom.xml clean package
+      #upload-path: ./poorna.zip
+    secrets:
+      access-key: ${{ secrets.access_key }}
+      secret-key: ${{secrets.secret_key}}
+
+      
+
+      

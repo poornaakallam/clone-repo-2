@@ -9,7 +9,8 @@ jobs:
     with: 
       path: ~/.m2/repository
       key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
-      #cmd: mvn -f pom.xml clean package
+      java-version: '17'
+      cmd: mvn -f pom.xml clean package
       #upload-path: ./poorna.zip
     secrets:
       access-key: ${{ secrets.access_key }}

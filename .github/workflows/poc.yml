@@ -11,6 +11,7 @@ jobs:
       key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
       java-version: '17'
       cmd: mvn -f ./pom.xml versions:set -DnewVersion=SNAPSHOT
+      woring-directory: clone-repo-2/pom.xml
       #upload-path: ./poorna.zip
     secrets:
       access-key: ${{ secrets.access_key }}

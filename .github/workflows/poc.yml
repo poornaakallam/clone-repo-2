@@ -13,7 +13,7 @@ jobs:
       java-version: '17'
       cmd: mvn -f pom.xml versions:set -DnewVersion=SNAPSHOT
       build: mvn -f pom.xml clean package
-      artifact: cd ${{ github.workspace }}/target/
+      artifact: cd /home/runner/work/clone-repo-2/clone-repo-2/target
       zip: zip fr.zip
       #working-directory: ./
       upload-path: ${{github.workspace }}/target/fr.zip

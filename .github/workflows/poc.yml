@@ -5,7 +5,7 @@ on:
         - '*'
 jobs:
   build:
-    needs: []
+    needs: [print]
     uses: poornaakallam/workflows/.github/workflows/poc.yml@main
     with: 
       #GITHUB_USER_TOKEN: ${{ needs.outputs.GITHUB_USER_TOKEN }}

@@ -8,6 +8,7 @@ jobs:
   build:
     uses: poornaakallam/workflows/.github/workflows/poc.yml@main
     with: 
+      GITHUB_USER_TOKEN: ${{secrets.ACCESS_TOKEN}}
       path: ~/.m2/repository
       key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
       java-version: '17'

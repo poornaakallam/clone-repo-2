@@ -10,7 +10,7 @@ jobs:
     with: 
       #GITHUB_USER_TOKEN: ${{ needs.outputs.GITHUB_USER_TOKEN }}
       path: ~/.m2/repository
-      key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
+      #key: "$RUNNER_OS-maven-$HASH_VALUE('**/pom.xml')"
       java-version: '17'
       cmd: mvn -f pom.xml versions:set -DnewVersion=SNAPSHOT
       build: mvn -f pom.xml clean package
